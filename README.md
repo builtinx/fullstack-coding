@@ -53,8 +53,9 @@ mysql -h 127.0.0.1 -u root < data.sql
 
 ## Expectations
 
-In the ideal state, you will have the `/companies` endpoint working with
-the API service, and be able to render that information from the
-`/companies` route in Vue.js. But, most importantly, our expectation is
-that you learn from the experience, with Go, Vue, and with the structure
-we use to work on our projects. *And that you have fun!*
+In the ideal state, you will have the `/` endpoint working on the
+frontend with the API service, and be able to render that information
+from the `/companies` route in Vue.js. But, most importantly, our
+expectation is that you learn from the experience, with Go, Vue, and
+with the structure we use to work on our projects. *And that you have
+fun!*
