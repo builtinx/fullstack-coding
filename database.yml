@@ -1,0 +1,7 @@
+development:
+  dialect: mysql
+  database: second_interview
+  user: root
+  password: ''
+  host: 127.0.0.1
+  pool: 5

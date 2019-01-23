@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  mysql:
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    image: "mysql:5.7.22"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    user: mysql
+
+  api:
+    depends_on:
+      - mysql
+    image: builtin/backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - modcache:/go/pkg/mod
+      - .:/app
+      - /app/frontend
+    command: bin/launch-api
+
+  frontend:
+    image: builtin/frontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - nodecache:/app/frontend/node_modules
+      - ./frontend:/app/frontend
+    command: bin/launch-frontend
+
+volumes:
+  mysql:
+  modcache:
+  nodecache:

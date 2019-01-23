@@ -1,0 +1,6 @@
+FROM golang:1.11-alpine
+
+RUN apk add --update git bash gcc musl-dev
+
+VOLUME /app
+WORKDIR /app
