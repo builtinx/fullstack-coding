@@ -1,5 +1,5 @@
 <template>
-  <Test/>
+  <Companies/>
 </template>
 
 <script>
