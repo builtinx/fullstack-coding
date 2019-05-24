@@ -9,4 +9,5 @@ require (
 	github.com/gobuffalo/pop v4.9.4+incompatible
 	github.com/gobuffalo/x v0.0.0-20181110221217-14085ca3e1a9 // indirect
 	github.com/gorilla/mux v1.6.2
+	github.com/lib/pq v1.1.1 // indirect
 )
